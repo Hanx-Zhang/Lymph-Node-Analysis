@@ -1,7 +1,7 @@
 # Lymph Node Analysis
 
 This repository contains code for the Lymph Node Analysis (LNA) framework
-described in the manuscript "Anatomically Grounded, Scalable, and Interpretable
+described in the study "Anatomically Grounded, Scalable, and Interpretable
 CT Analysis of Thoracic Lymph Node Metastasis in Lung Cancer".
 
 LNA is organized as two linked components:
