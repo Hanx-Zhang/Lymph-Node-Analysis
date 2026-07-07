@@ -15,24 +15,6 @@ channel. The first CT channel is a lung-window normalization, the second is a
 mediastinal-window normalization, and the third channel is a tumor/LN prior map
 derived from segmentation.
 
-## Repository layout
-
-```text
-Lymph-Node-Analysis/
-  README.md
-  requirements.txt
-  PAPER_CODE_NOTES.md
-  LNA-Dx/
-    main.py
-    test.py
-    lna_dx/
-    requirements.txt
-  LNA-Seg/
-    README.md
-    predict_local.py
-    nnunet/
-    test_lymph/
-```
 
 ## LNA-Seg
 
@@ -66,36 +48,4 @@ Install the diagnosis dependencies:
 pip install -r requirements.txt
 ```
 
-For segmentation, install nnU-Net v1 as described in `LNA-Seg/README.md`.
-
-## Data organization
-
-This repository does not include medical images, labels, pretrained weights, or
-trained checkpoints. Large data and weight files should be stored outside Git
-and passed to the scripts with command-line arguments.
-
-The diagnosis scripts expect fold text files. Each row should contain:
-
-```text
-/path/to/image_volume.nii.gz label
-```
-
-The image-list and prior-list files must have the same row order. Labels are
-converted to a binary metastasis target: labels lower than 1 are treated as
-non-metastatic, and labels greater than or equal to 1 are treated as metastatic.
-
-## Quick diagnosis commands
-
-```bash
-cd LNA-Dx
-python main.py --no-pretrain
-python test.py --weights checkpoints/R18/weights_cls.pth
-```
-
-Use `--image-list-dir`, `--prior-list-dir`, `--train-folds`, and `--test-folds`
-to point the scripts to your own fold files.
-
-## Notes for reviewers
-
-`PAPER_CODE_NOTES.md` summarizes the current paper-code correspondence and the
-known differences between the manuscript scope and this code release.
+For segmentation, install nnU-Net v1`.
