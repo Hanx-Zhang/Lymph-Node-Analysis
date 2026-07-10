@@ -1,0 +1,5 @@
+config = {
+    "device": "cuda:0",
+    "CalculateLungBoundingbox": True,
+    "margin_lung_boundingbox": 0,
+}

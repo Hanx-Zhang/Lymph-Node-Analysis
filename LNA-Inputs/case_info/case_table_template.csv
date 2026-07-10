@@ -1,0 +1,4 @@
+case_id,tumor_side,n_stage
+case001,left,N0
+case002,right,N1
+case003,other,N2
